@@ -1,7 +1,22 @@
 // MITASK 
+// B-TASK
+
+function countDigits(string) {
+
+  let count = 0;
+  for (let number of string) {
+    if (number >= "0" && number <= "9") {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countDigits("ad2a54y79wet0sfgb9"));
+
+// MITASK 
 // A-TASK
 
-function countLetter(a, b) {
+/*function countLetter(a, b) {
   let count = 0;
   for (let i = 0; i < b.length; i++) {
     if (b[i] === a) {
@@ -10,7 +25,7 @@ function countLetter(a, b) {
   } 
   return count;
 }
-console.log(countLetter("e", "engineer"));
+console.log(countLetter("e", "engineer"));  */
 
 
 
