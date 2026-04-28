@@ -1,7 +1,21 @@
 // MITASK 
+// C-TASK
+
+function checkContent(a, b) {
+  if (a.length !== b.length) {
+    return false;
+  }
+  let a_string = a.split("").sort().join("");
+  let b_string = b.split("").sort().join("");
+  return a_string === b_string;
+}
+console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(checkContent("leo", "oel")); // true
+
+// MITASK 
 // B-TASK
 
-function countDigits(string) {
+/*function countDigits(string) {
 
   let count = 0;
   for (let number of string) {
@@ -11,7 +25,7 @@ function countDigits(string) {
   }
   return count;
 }
-console.log(countDigits("ad2a54y79wet0sfgb9"));
+console.log(countDigits("ad2a54y79wet0sfgb9"));   */
 
 // MITASK 
 // A-TASK
