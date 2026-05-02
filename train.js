@@ -1,7 +1,65 @@
-// MITASK 
+// MITASK
+// D-TASK
+class Shop {
+  // state
+  non;
+  lagmon;
+  cola;
+
+  // constructor
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  // method
+  getTime() {
+    const now = new Date();
+    const soat = String(now.getHours()).padStart(2, "0");
+    const minut = String(now.getMinutes()).padStart(2, "0");
+    return `${soat}:${minut}`;
+  }
+
+  qoldiq() {
+    const time = this.getTime();
+    return `Hozir ${time}da ${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola}ta cola mavjud!`;
+  }
+
+  sotish(nomi, soni) {
+    if (!this[nomi]) {
+      return "Bunday mahsulot yo'q";
+    }
+    if (this[nomi] < soni) {
+      return "Yetarli mahsulot yo'q";
+    }
+    this[nomi] -= soni;
+
+    const time = this.getTime();
+    console.log(`${time}da ${soni}ta ${nomi} sotildi`);
+  }
+
+  qabul(nomi, soni) {
+    if (!this[nomi]) {
+      return "Bunday mahsulot yo'q";
+    }
+    this[nomi] += soni;
+
+    const time = this.getTime();
+    console.log(`${time}da ${soni}ta ${nomi} qabul qilindi`);
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+console.log(shop.qoldiq());
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
+console.log(shop.qoldiq());
+
+// MITASK
 // C-TASK
 
-function checkContent(a, b) {
+/* function checkContent(a, b) {
   if (a.length !== b.length) {
     return false;
   }
@@ -10,9 +68,9 @@ function checkContent(a, b) {
   return a_string === b_string;
 }
 console.log(checkContent("mitgroup", "gmtiprou")); // true
-console.log(checkContent("leo", "oel")); // true
+console.log(checkContent("leo", "oel")); // true. */
 
-// MITASK 
+// MITASK
 // B-TASK
 
 /*function countDigits(string) {
@@ -27,7 +85,7 @@ console.log(checkContent("leo", "oel")); // true
 }
 console.log(countDigits("ad2a54y79wet0sfgb9"));   */
 
-// MITASK 
+// MITASK
 // A-TASK
 
 /*function countLetter(a, b) {
@@ -40,11 +98,6 @@ console.log(countDigits("ad2a54y79wet0sfgb9"));   */
   return count;
 }
 console.log(countLetter("e", "engineer"));  */
-
-
-
-
-
 
 // 21. NodeJS event loop va Callback functionlarni o'rganamiz
 
@@ -82,7 +135,6 @@ maslahatBering(65, (err, data) => {
   }
 });
 console.log("passed here 1");   */
-
 
 //22. Asynchronous functionlarni qo'llash
 // ASYNC FUNCTION
