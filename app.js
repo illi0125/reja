@@ -29,11 +29,15 @@ app.set("view engine", "ejs");
 
 // 4 Routing code
 app.post("/create-item", (req, res) => {
+  console.log("STEP 2: From Frontend to Backend entry");
   console.log("user entered /create-tem");
   // console.log(req.body);
   const new_reja = req.body.reja;
+  console.log("STEP 3: From Backend to MongoDB");
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    console.log("STEP 4: From MongoDB to Backend back");
     console.log(data.ops);
+    console.log("STEP 5: Response from Backend to Frontend");
     res.json(data.ops[0]);
   });
   // res.end("success");
@@ -77,14 +81,18 @@ app.post("/delete-all", (req, res) => {
 });
 
 app.get("/", function (req, res) {
+  console.log("STEP 2: From Frontend to Backend entry");
   console.log("user entered /");
+  console.log("STEP 3: From Backend to MongoDB");
   db.collection("plans")
     .find()
     .toArray((err, data) => {
+      console.log("STEP 4: From MongoDB to Backend back");
       if (err) {
         console.log("something went wrong");
       } else {
         // console.log(data);
+        console.log("STEP 5: Response from Backend to Frontend");
         res.render("reja", { items: data });
       }
     });
