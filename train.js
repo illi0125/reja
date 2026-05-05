@@ -1,6 +1,13 @@
 // MITASK
+// E-TASK
+function getReverse(str) {
+  return str.split("").reverse().join('');
+}
+console.log(getReverse("hello"));
+
+// MITASK
 // D-TASK
-class Shop {
+/* class Shop {
   // state
   non;
   lagmon;
@@ -54,7 +61,7 @@ const shop = new Shop(4, 5, 2);
 console.log(shop.qoldiq());
 shop.sotish("non", 3);
 shop.qabul("cola", 4);
-console.log(shop.qoldiq());
+console.log(shop.qoldiq());   */
 
 // MITASK
 // C-TASK
