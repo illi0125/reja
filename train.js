@@ -1,9 +1,22 @@
 // MITASK
+// F-TASK
+function findDoublers(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(findDoublers("hello")); // true 2l in hello word
+console.log(findDoublers("leo")); //false
+
+// MITASK
 // E-TASK
-function getReverse(str) {
+/* function getReverse(str) {
   return str.split("").reverse().join('');
 }
-console.log(getReverse("hello"));
+console.log(getReverse("hello"));   */
 
 // MITASK
 // D-TASK
