@@ -10,12 +10,34 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-  </head>
-  <body style="background-color: #b8bbd1">
-    <div class="container">
-      <h1 class="display-4 text-center py-1">REJA VA MAQSADLAR</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <div class="jumbotron p-3 shadow-sm">
+    <style>
+      .form_back {
+        background-color: #ffffff;
+        border: #d1d5db;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      .title {
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+      .btn-sm {
+        border-radius: 20px;
+      }
+      #clean-al {
+        border-radius: 30px;
+        margin-top: 20px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body style="background-color: #f8fafc">
+    <div class="container">
+      <h1 class="display-4 text-center py-1 title">📌 REJA VA MAQSADLAR</h1>
+
+      <div class="jumbotron p-3 shadow-sm form_back">
         <form id="create-form" action="/create-item" method="POST">
           <div class="d-flex align-items-center">
             <input
@@ -51,7 +73,8 @@
       </ul>
 
       <button id="clean-al" class="btn btn-danger" style="border-radius: 20px">
-        Hammasini Rejalarni O'chirish
+        <i class="fa-solid fa-trash-can" style="color: white;"></i>
+        <b>Delete all plans</b>
       </button>
     </div>
 
