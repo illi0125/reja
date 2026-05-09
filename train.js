@@ -1,6 +1,24 @@
+// 📌 http://93.188.166.198:3014
+
+// MITASK
+// G-TASK
+function getHighestIndex(arr) {
+  let max = arr[0];
+  let index = 0;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+      index = i;
+    }
+  }
+  return index;
+}
+console.log(getHighestIndex([5, 21, 12, 21, 8])); // 1
+console.log(getHighestIndex([5, 21, 12, 21, 80])); // 4
+
 // MITASK
 // F-TASK
-function findDoublers(str) {
+/* function findDoublers(str) {
   for (let i = 0; i < str.length; i++) {
     if (str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
       return true;
@@ -10,6 +28,7 @@ function findDoublers(str) {
 }
 console.log(findDoublers("hello")); // true 2l in hello word
 console.log(findDoublers("leo")); //false
+*/
 
 // MITASK
 // E-TASK
