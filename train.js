@@ -1,8 +1,30 @@
+// MITASK
+// I-TASK
+function majorityElement(arr) {
+  let maxCount = 0;
+  let result;
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        count++;
+      }
+    }
+    if (count > maxCount) {
+      maxCount = count;
+      result = arr[i];
+    }
+  }
+  return result;
+}
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+console.log(majorityElement([1, 2, 3, 3, 5, 3, 3, 4]));
+
 // 📌 http://93.188.166.198:3014
 
 // MITASK
 // H-TASK
-function getPositive(arr) {
+/* function getPositive(arr) {
   let result = "";
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 0) {
@@ -13,6 +35,7 @@ function getPositive(arr) {
 }
 console.log(getPositive([1, -4, 2])); // "12"
 console.log(getPositive([-1, -4, -2, 6, 5, 66])); // "6566"
+*/
 
 // MITASK
 // G-TASK
