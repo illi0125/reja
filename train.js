@@ -1,6 +1,21 @@
 // MITASK
+// J-TASK
+function findLongestWord(str) {
+  let words = str.split(" ");
+  let longestWord = " ";
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+  return longestWord;
+}
+console.log(findLongestWord("I come from Uzbekistan"));
+console.log(findLongestWord("I am learnig engineering"));
+
+// MITASK
 // I-TASK
-function majorityElement(arr) {
+/* function majorityElement(arr) {
   let maxCount = 0;
   let result;
   for (let i = 0; i < arr.length; i++) {
@@ -19,6 +34,7 @@ function majorityElement(arr) {
 }
 console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
 console.log(majorityElement([1, 2, 3, 3, 5, 3, 3, 4]));
+*/
 
 // 📌 http://93.188.166.198:3014
 
