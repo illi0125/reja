@@ -1,6 +1,21 @@
 // MITASK
+// K-TASK
+function countVowels(str) {
+  let count = 0;
+  let vowels = "aeiuo";
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i].toLowerCase())) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countVowels("string"));
+console.log(countVowels("leo"));
+
+// MITASK
 // J-TASK
-function findLongestWord(str) {
+/* function findLongestWord(str) {
   let words = str.split(" ");
   let longestWord = " ";
   for (let i = 0; i < words.length; i++) {
@@ -12,6 +27,7 @@ function findLongestWord(str) {
 }
 console.log(findLongestWord("I come from Uzbekistan"));
 console.log(findLongestWord("I am learnig engineering"));
+*/
 
 // MITASK
 // I-TASK
